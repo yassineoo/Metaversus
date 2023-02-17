@@ -9,7 +9,7 @@ const NewFeatures = ({imgUrl,title,subtitle}) => (
         />
          </div>
         <h1 className="mt-6 text-6 leading-7 text-white font-bold ">{title}</h1>
-        <p className="flex-1 mt-4 font-normal text-[18px] text-[#b0b0b0] ">{subtitle}</p>
+        <p className="flex-1 mt-4 font-normal text-[18px] text-[#b0b0b0] leading-8">{subtitle}</p>
    
   </div>
 );
