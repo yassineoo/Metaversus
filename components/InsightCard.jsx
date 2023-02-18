@@ -8,7 +8,7 @@ const InsightCard = ({
 }) => (
   <motion.div
     variants={fadeIn('up', 'spring', index * 0.5, 1)}
-    className="flex felx-col md:flex-row gap-3"
+    className="flex flex-col lg:flex-row gap-3"
   >
     <img
       src={imgUrl}

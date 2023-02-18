@@ -1,10 +1,8 @@
 'use client';
 
-import {motion} from "framer-motion";
-import styles from "../styles/index.js";
-import {slideIn,staggerContainer,textVariant} from "../utils/motion"
-
-
+import { motion } from 'framer-motion';
+import styles from '../styles/index.js';
+import { slideIn, staggerContainer, textVariant } from '../utils/motion';
 
 const Hero = () => (
   <section className={`${styles.yPaddings} sm:pl-16 pl-2`}>
@@ -12,52 +10,56 @@ const Hero = () => (
       variants={staggerContainer}
       initial="hidden"
       whileInView="show"
-      viewport={{once:false , amount:0.25}}
+      viewport={{ once: false, amount: 0.25 }}
       className={`${styles.innerWidth} mx-auto flex flex-col`}
     >
       <div className="flex  justify-center items-center
        flex-col relative z-10
-      ">
+      "
+      >
         <motion.h1 className={`${styles.heroHeading}`}
-         variants={textVariant(1.1)}>
-            Metaverse
+          variants={textVariant(1.1)}
+        >
+          Metaverse
         </motion.h1>
         <motion.div
-        className="flex flex-row justify-center items-center"
-
-        variants={textVariant(1.2)}>
-              <h1 className={styles.heroHeading}>Ma</h1>
-              <div className={styles.heroDText}></div>
-              <h1 className={styles.heroHeading}>Ness</h1>
+          className="flex flex-row justify-center items-center"
+          variants={textVariant(1.2)}
+        >
+          <h1 className={styles.heroHeading}>Ma</h1>
+          <div className={styles.heroDText} />
+          <h1 className={styles.heroHeading}>Ness</h1>
 
         </motion.div>
 
       </div>
       <motion.div
-        variants={slideIn("right","tween",0.2,1)}
+        variants={slideIn('right', 'tween', 0.2, 1)}
         className="relative w-full md:-mt-[20px] -mt-[12px]"
       >
-        <div className=" absolute w-full h-[250px] hero-gradient rounded-t-[140px] z-[0] -top-[30px]"/>
-          <img src="/cover.png"
+        <div className=" absolute w-full h-[250px] hero-gradient rounded-t-[140px] z-[0] -top-[30px]" />
+        <img src="/cover.png"
           alt="cover"
-          className="w-full sm:h-[500] h-[350px] 
-          object-cover rounded-tl-[140px] z-10 relative" />
-          <a href="#explore">
-              <div className="w-full flex justify-end
+          className="w-full sm:h-[400] h-[350px]
+          object-cover rounded-tl-[140px] z-10 relative"
+        />
+        <a href="#explore">
+          <div className="w-full flex justify-end bottom-0
               sm:-mt-[70px] -mt-[50x] pr-[40px]
               relative z-10
-              ">
-                <img
-                    src="/stamp.png"
-                    alt="stamp"
-                    className="sm:w-[155px] w-[100px]
+              "
+          >
+            <img
+              src="/stamp.png"
+              alt="stamp"
+              className="sm:w-[155px] w-[100px]
                     sm:h-[100px] object-contain"
-                 />
+            />
 
-              </div>
+          </div>
 
-          </a>
-        
+        </a>
+
       </motion.div>
 
     </motion.div>
