@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { TypingText, TitleText } from '../components/CustomTexts.jsx';
+import WorldCard from '../components/WorldCard.jsx';
 
 import styles from '../styles/index.js';
 import { staggerContainer, fadeIn } from '../utils/motion';
@@ -51,22 +52,10 @@ const World = () => (
           />
 
         </div>
-        <div className="absolute bottom-[24%] left-[20%]  shadow-lg shadow-fuchsia-700 w-[196px] h-[150px]  p-[6px] bg-[#5d6680] ">
-          <img
-            src="card1.png"
-            alt="people 02"
-            className="w-full h-full object-contain"
-          />
+  
+        <WorldCard cardName="card1.png" styleCard="bottom-[24%] left-[20%]" num={23} />
 
-        </div>
-        <div className="absolute top-[24%] right-[20%] w-[196px] h-[150px] shadow-lg shadow-fuchsia-700  p-[6px] bg-[#5d6680] ">
-          <img
-            src="card2.png"
-            alt="people 02"
-            className="w-full h-full object-contain"
-          />
-
-        </div>
+        <WorldCard cardName="card2.png" styleCard="top-[24%] right-[20%]" num={125} />
 
       </motion.div>
     </motion.div>
