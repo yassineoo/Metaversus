@@ -7,7 +7,7 @@ const  Home = () => {
     const password = 'pass';
 
     // Simulate a login by sending a POST request to your login endpoint
-    fetch('http://localhost:8080/api/auth/login/admin', {
+    fetch('https://d2b3-129-45-94-57.ngrok-free.app/api/auth/login/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
