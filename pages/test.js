@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Home() {
+export default  Home = () => {
   useEffect(() => {
     // Replace these hardcoded values with your actual credentials
     const phoneNumber = '+213663838507';
