@@ -4,18 +4,20 @@ const  Home = () => {
   useEffect(() => {
     // Replace these hardcoded values with your actual credentials
     const phoneNumber = '+213663838507';
-    const password = "312586";
+    const password = 'pass';
 
     // Simulate a login by sending a POST request to your login endpoint
-    fetch('https://d2b3-129-45-94-57.ngrok-free.app/api/auth/verify-phone-number', {
+    fetch('http://localhost:8080/api/auth/login/admin', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        "withCredentials" : true
       },
       body: JSON.stringify({
         phoneNumber: phoneNumber,
-        otp: password,
+        password: password,
       }),
+      credentials: 'include',
     })
       .then((response) => {
         if (response.ok) {
